@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-PYQKHun+HfjBkdjFpIqk0ehwY2lw++Y7pbQPLi6wki8elXV+HL6E8z0Z9xUbhFr8+sy1vZvL2NOQw/hv5I2QVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Flex Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    </head>
+ <body>
+    <div id="loading-screen">
+        <div class="loader">
+        
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-item item-1">
+            <div class="logo"><a href="#home">EaziLearning <span id="hub">Hub</span></a></div>
+            <div class="search-container">
+                <input type="search" placeholder="Search...">
+                <button type="button">Search</button>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                <ul class="menu">
+                    <li class="parent-item">
+                        <a href="#" onclick="toggleSubMenu(event); showHome();"><span class="arrow"></span>Home</a>
+                        <ul>
+                            <li><a href="#" onclick="showPageOverview()">Page Overview</a></li>
+                            <li ><a href="#" onclick="showContentOverview()">Content Overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-item" >
+                        <a href="#"  onclick="toggleSubMenu(event)"><span class="arrow"></span>Courses</a>
+                        <ul>
+                            <li class="category" ><a href="#" onclick="showWebDevelopment()">Web Development</a>
+                                <ul>
+                                    <li><a href="#" onclick="showHtmlCss()">HTML/CSS</a></li>
+                                    <li><a href="#" onclick="showJavascript()">JavaScript</a></li>
+                                    <!-- Add more specific courses under Web Development category -->
+                                </ul>
+                            </li>
+                            <li class="category"><a href="#" onclick="showMobileAppDev()">Mobile App Development</a>
+                                <ul>
+                                    <li><a href="#" onclick="showAndroidDevelopment()">Android Development</a></li>
+                                    <li><a href="#" onclick="showIosDevelopment()">iOS Development</a></li>
+                                    <!-- Add more specific courses under Mobile App Development category -->
+                                </ul>
+                            </li>
+                            <!-- Add more course categories and specific courses as needed -->
+                        </ul>
+                    </li>
+                   
+                    <li class="parent-item"><a href="#" onclick="toggleSubMenu(event)" ><span class="arrow"></span>Resources</a>
+                        <ul class="submenu">
+                            <li><a href="#" onclick="showYtTuts()">YT Tutorials</a></li>
+                            <li><a href="#" onclick="showRecommended()">Recommended Sites</a></li>
+                            <li><a href="#" onclick="showBooks ()">Books to Read</a></li>
+                            <li><a href="#" onclick="showAdditional()">Additional Materials</a></li>
+                        </ul></li>
+                    <li><a href="./others/community.html"><span class="arrow"></span>Community</a></li>
+                    <li class="parent-item"><a href="#" onclick="toggleSubMenu(event)"><span class="arrow"></span>Recommended Videos</a>
+                        <ul class="submenu">
+                            <li><a href="#" onclick="showTechTalks()">Tech Talks</a></li>
+                            <li><a href="#" onclick="showConference()">Conference</a></li>
+                            <li><a href="#" onclick="showWebinars()">Webinars</a></li>
+                            <li><a href="#" onclick="showBonusVideos()">Bonus Videos</a></li>
+                        </ul></li>
+                    <li class="parent-item"><a href="./others/about.html"><span class="arrow"></span>About Us</a></li>
+                    <li class="parent-item"><a href="./others/about.html#contact"><span class="arrow"></span>Contact Us</a></li>
+                    <li class="parent-item"><a href="./others/favs.html"><span class="arrow"></span>Favorites/Bookmarks</a></li>
+                    <li class="parent-item"><a href="./others/faq.html"><span class="arrow"></span>FAQ</a></li>
+                    <li class="parent-item"><a href="./others/log.html"><span class="arrow"></span>LogIn/SignUp</a></li>
+                </ul>
+        </div>
+        <div class="flex-item item-2">
+            <div id="content">
+                <div>
+                    <img src="LearnImage-removebg-preview.png" alt="Study Image" style="margin-left: 20%;">
+                </div>
+                <div>
+                        <h2>Welcome to EaziLearning Hub!</h2>
+                        <p>Our platform is dedicated to providing high-quality learning resources for various topics in technology and programming. Whether you're a beginner or an experienced developer, you'll find valuable content to enhance your skills and knowledge.</p>
+
+                        <h3>Featured Courses</h3>
+                        <ul>
+                        <li><a href="#courses">HTML/CSS</a></li>
+                        <li><a href="#courses">JavaScript</a></li>
+                        <li><a href="#courses">Android Development</a></li>
+                        <li><a href="#courses">iOS Development</a></li>
+                        </ul>
+
+                        <h3>Learning Resources</h3>
+                        <p>Explore our vast collection of tutorials, articles, videos, and books curated from reputable sources to help you stay updated with industry trends.</p>
+
+                        <h3>Community</h3>
+                        <p>Join our vibrant community of learners where you can connect, collaborate, and share knowledge with like-minded individuals.</p>
+
+                        <h3>Upcoming Events</h3>
+                        <p>Don't miss out on our upcoming events, workshops, and webinars. Stay tuned for exciting learning opportunities!</p>
+
+                        <h3>Testimonials</h3>
+                        <p>Hear what our users have to say about their experience with EaziLearning Hub.</p>
+
+                        <h3>Get Started</h3>
+                        <p>Ready to embark on your learning journey? Sign up for an account, explore our courses, and unlock your potential today!</p>
+                </div>
+            </div>
+                
+        </div>
+        <div class="flex-item item-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum impedit iure voluptatum at commodi deserunt recusandae ea deleniti, voluptatibus blanditiis! Veritatis est deleniti ea commodi tenetur eveniet tempore sed alias.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod atque sed recusandae beatae rerum, sunt earum accusamus! Blanditiis architecto animi quisquam explicabo tempore maiores ea sint libero aut hic?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nulla, nihil omnis qui quas exercitationem eaque tenetur deleniti laudantium rerum? Iusto praesentium dolores aliquid. Ea, deleniti. Provident quo necessitatibus aspernatur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt tempore omnis voluptates amet pariatur quisquam neque, hic nesciunt quo odit repellat fugiat laudantium non mollitia sint aspernatur officiis alias esse.
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#home" id="title">EaziLearning <span id="hub">Hub</span></a>
+            </div>
+
+            <div class="foot">
+             <div class="footer-links" id="item">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+              <div class="footer-links" id="item">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+             </div>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>Stay connected with us:</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EaziLearning Hub. All rights reserved. | Designed by Confidence David</p>
+        </div>
+        
+    </footer>
+</body>
+</html>

@@ -1,0 +1,276 @@
+body, html {
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 0;
+    background-color: #333;
+    color: #f7f5f5;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+}
+
+.item-1{
+    font-family: sans-serif;
+}
+
+.item-2 {
+    background-color: #d4d4d4;
+    color: #333;
+}
+
+.item-1, .item-3 {
+    flex: 1;
+    padding: 10px;
+}
+
+.item-2 {
+    flex: 2;
+    padding: 15px;
+}
+
+.flex-item {
+    overflow-y: auto;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px 20px;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.menu li a:hover{
+    background-color: aqua;
+    color: #333;
+    font-size: 18px;
+}
+
+.logo {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#hub {
+    background-color: #d4d4d4;
+    color: #333;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Styling for the toggle icon */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+ }
+
+ .menu ul {
+    display: none;
+}
+
+.menu li.show-submenu > ul {
+    display: block;
+}
+
+
+/* CSS for the arrow icon */
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 10px solid red; /* Color of the arrow */
+    margin-right: 10px; /* Adjust the spacing between text and arrow */
+    vertical-align: middle; /* Align the arrow vertically with the text */
+    transition: transform 0.3s; /* Add transition for smooth rotation */
+}
+
+/* CSS for the arrow icon when the submenu is opened */
+.parent-item.show-submenu > a .arrow {
+    transform: rotate(90deg); /* Rotate the arrow 90 degrees when submenu is opened */
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* Change background color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid red; /* Change loader color as needed */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#content {
+    display: none; /* Hide content initially */
+}
+
+
+.category {
+    position: relative;
+    
+}
+
+.category > a::after {
+    content: '▶'; /* Unicode character for arrow */
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: rgb(3, 158, 3); /* Color of arrow */
+    /* margin-left: -8px; */
+}
+
+.category.active > a::after {
+    content: '▼'; /* Unicode character for down arrow */
+}
+.category.active ul {
+    display: list-item; /* Show submenu under category when category is active */
+}
+ul{
+    list-style: none;
+}
+.category ul {
+    display: none; /* Hide submenu under category by default */
+    /* position: absolute; */
+    /* top: 0; */
+    margin-right: -10px; /* Adjust this value to change the spacing */
+}
+
+
+.signup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#h3{
+    margin-top: 10%;
+}
+
+#title{
+    color: #d4d4d4;
+}
+
+footer{
+    background-color: #333;
+    height: 60px;
+    padding: 20px;
+    border-top: #d4d4d4 3px solid;
+}
+footer a{
+    text-decoration: none;
+    color: #d4d4d4;
+    font-size: larger;
+}
+
+footer a:hover{
+    font-size: 20px;
+    color: aqua;
+}
+.footer-bottom{
+    text-align: center;
+}
+
+.foot{
+    display: flex;
+    justify-content: space-around;
+}
+
+#item{
+    display: flex;
+    border-left: #d4d4d4 2px solid;
+}
+
+@media screen and (max-width: 980px) {
+    .menu {
+        display: none; 
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active + .menu {
+        display: block;
+        width: 100%;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .search-container{
+         text-align: center;
+    }
+
+    .item-1, .item-2, .item-3 {
+        flex: none; /* Prevent item-1 from growing or shrinking */
+    }
+
+    
+
+    .logo {
+        text-align: center;
+    }
+
+    .signup-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+ 
+}

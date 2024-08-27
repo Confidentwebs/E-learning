@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <link rel="stylesheet" href="others.css">
+</head>
+<body class="loginbody">
+    <div class="login-container">
+        <form id="login-form" class="login-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="signup-button">Login</button>
+        </form>
+        <form id="signup-form" class="signup-form">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

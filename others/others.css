@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 0;
+    background-color: #333;
+    color: #FFF;
+}
+
+.loginbody{
+    background: url(background.webp) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+}
+.login-container {
+    background-color: #333333a4; /* Transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    width: 50%; /* Adjust the width as needed */
+}
+
+.login-container input {
+    margin-bottom: 10px;
+}
+
+.login-container button {
+    background-color: #007bff; /* Change button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3; /* Change button background color on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .login-container {
+        background-color: #333333d8;
+        width: 80%; /* Adjust the width for smaller screens */
+
+    }
+}
